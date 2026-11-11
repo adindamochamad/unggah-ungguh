@@ -55,9 +55,7 @@ replicated across dialects, not nine independent items (see `EVAL.md`).
 Gold review revealed the schema conflates madya-as-lexicon with
 madya-as-mixture; v0.2.0 must separate them.
 
-## Draft honesty claims — pending owner confirmation
-
-> Do not treat the following as signed until the owner confirms each line.
+## Honesty claims
 
 1. Test data is synthetic Javanese sentences authored by the repository owner. It is not BASAibu data.
 2. This spike is not deployed to BASAibu. There is no affiliation and no partnership with BASAibu or Wikimedia affiliates implied by this repository.
