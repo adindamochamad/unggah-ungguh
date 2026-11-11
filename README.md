@@ -69,6 +69,7 @@ madya-as-mixture; v0.2.0 must separate them.
 - No clustering, summarisation, or cross-proposal analysis.
 - Correction UI is a site-wide Common.js widget talking to `localhost:8000`. It is not a MediaWiki extension.
 - Schema v0.1.0 still conflates madya-as-lexicon with madya-as-mixture; the labeller implements the second sense. v0.2.0 must separate them.
+- Seeding once raised `RuntimeException: /tmp/smw_chgprop_*.tmp is not readable` from the Semantic MediaWiki job queue. It did not recur on the second run and is not understood.
 
 ## Pins (do not upgrade to work around problems)
 
