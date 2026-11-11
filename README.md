@@ -22,7 +22,7 @@ Then open:
 - service: http://localhost:8000/healthz
 - schema: http://localhost:8000/schema
 
-Local wiki login (not a production password): `Admin` / `Adminpass1!`
+Local wiki admin credentials are defined in `docker-compose.yml` under the `mediawiki` service, and are throwaway values for a local-only stack.
 
 On the proposal page, use **Confirm / Correct / Reject** under the labels table.
 That posts to the sidecar; the sidecar writes through `api.php`. No wikitext editing.
