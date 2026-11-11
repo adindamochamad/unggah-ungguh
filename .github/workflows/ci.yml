@@ -1,0 +1,29 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: pip install -r service/requirements.txt
+      - name: Test
+        working-directory: service
+        run: pytest -q
+      - name: Eval
+        working-directory: service
+        run: python -m app.eval
+        env:
+          LEXICON_PATH: ${{ github.workspace }}/data/lexicon/krama_ngoko.yaml
+          CORPUS_PATH: ${{ github.workspace }}/data/corpus.yaml
+          EVAL_OUT: ${{ github.workspace }}/EVAL.md
+      - name: Lint
+        working-directory: service
+        run: ruff check app tests

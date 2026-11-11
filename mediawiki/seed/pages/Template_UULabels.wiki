@@ -1,0 +1,52 @@
+<includeonly>
+{| class="wikitable uu-labels"
+! Dimension !! Value
+|-
+| Register || {{{register|}}}
+|-
+| Dialect || {{{dialect|}}}
+|-
+| Stance || {{{stance|}}}
+|-
+| Label state || {{{state|}}}
+|-
+| Confidence || {{{confidence|}}}
+|-
+| Schema || {{{schema|0.1.0}}}
+|-
+| Labelled at || {{{labelled|}}}
+|}
+<div class="uu-controls"
+     data-page="{{FULLPAGENAME}}"
+     data-register="{{{register|}}}"
+     data-dialect="{{{dialect|}}}"
+     data-stance="{{{stance|}}}"
+     data-state="{{{state|}}}"
+     data-confidence="{{{confidence|}}}"
+     data-schema="{{{schema|0.1.0}}}"></div>
+{{#set:
+Has register={{{register|}}}
+|Has dialect={{{dialect|}}}
+|Has stance={{{stance|}}}
+|Has label state={{{state|}}}
+|Has schema version={{{schema|0.1.0}}}
+|Has labelled at={{{labelled|}}}
+}}
+{{#if:{{{confidence|}}}|{{#set:Has label confidence={{{confidence|}}}}}}}
+</includeonly>
+<noinclude>
+Template:UULabels — Unggah-Ungguh schema v0.1.0.
+
+Example:
+<pre>
+{{UULabels
+|register=krama
+|dialect=banyumasan
+|stance=deferential
+|state=machine
+|confidence=0.72
+|schema=0.1.0
+|labelled=2026-11-11
+}}
+</pre>
+</noinclude>

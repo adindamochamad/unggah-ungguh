@@ -1,0 +1,75 @@
+services:
+  db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: mediawiki
+      MYSQL_USER: wiki
+      MYSQL_PASSWORD: wikipass
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "wiki", "-pwikipass"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  mediawiki:
+    build: ./mediawiki
+    ports:
+      - "8080:80"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      MW_DB_HOST: db
+      MW_DB_NAME: mediawiki
+      MW_DB_USER: wiki
+      MW_DB_PASS: wikipass
+      MW_SERVER: http://localhost:8080
+      MW_INTERNAL_SERVER: http://mediawiki
+      MW_BOT_USER: uu-bot
+      MW_BOT_PASS: UuBotPass1!
+      MW_ADMIN_USER: Admin
+      MW_ADMIN_PASS: Adminpass1!
+      MW_SITENAME: Unggah-Ungguh Spike
+    volumes:
+      - mediawiki_images:/var/www/html/images
+      - mediawiki_persist:/persist
+      - ./mediawiki/seed:/seed
+      - ./mediawiki/LocalSettings.append.php:/var/www/html/LocalSettings.append.php
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/index.php"]
+      interval: 10s
+      timeout: 5s
+      retries: 36
+      start_period: 90s
+
+  service:
+    build: ./service
+    ports:
+      - "8000:8000"
+    depends_on:
+      mediawiki:
+        condition: service_healthy
+    environment:
+      MW_URL: http://mediawiki
+      MW_BOT_USER: uu-bot
+      MW_BOT_PASS: UuBotPass1!
+      SCHEMA_VERSION: "0.1.0"
+      LEXICON_PATH: /app/data/lexicon/krama_ngoko.yaml
+      CORPUS_PATH: /app/data/corpus.yaml
+      EVAL_OUT: /workspace/EVAL.md
+      MODEL_ID: rules-v0
+      PYTHONPATH: /app
+    volumes:
+      - ./data:/app/data:ro
+      - ./service/app:/app/app
+      - ./service/tests:/app/tests
+      - ./:/workspace
+
+volumes:
+  mysql_data:
+  mediawiki_images:
+  mediawiki_persist:

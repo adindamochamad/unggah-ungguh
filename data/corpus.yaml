@@ -1,0 +1,176 @@
+# Synthetic Javanese sentences authored by the repository owner
+# (Adinda Panca Mochamad) for this spike. These are NOT BASAibu data.
+# Sentences only — no author personas, no named minors.
+# Schema version: 0.1.0
+
+schema_version: "0.1.0"
+sentences:
+  # ngoko × mataraman
+  - id: s01
+    text: "Kowe arep mangan apa saiki?"
+    register: ngoko
+    dialect: mataraman
+    stance: peer
+  - id: s02
+    text: "Aku arep turu dhisik, kowe aja rame."
+    register: ngoko
+    dialect: mataraman
+    stance: peer
+  - id: s03
+    text: "Kowe kudu nulis proposal kuwi saiki."
+    register: ngoko
+    dialect: mataraman
+    stance: assertive
+  - id: s04
+    text: "Aku wis mangan, kowe menyang ngendi?"
+    register: ngoko
+    dialect: mataraman
+    stance: peer
+
+  # ngoko × jawa-timuran
+  - id: s05
+    text: "Kon wes mangan durung, cah?"
+    register: ngoko
+    dialect: jawa-timuran
+    stance: peer
+  - id: s06
+    text: "Aku gak gelem ngene ae, kon kudu ngomong terus terang."
+    register: ngoko
+    dialect: jawa-timuran
+    stance: assertive
+  - id: s07
+    text: "Ayo ndang turu, kon sesuk isih sekolah."
+    register: ngoko
+    dialect: jawa-timuran
+    stance: peer
+  - id: s08
+    text: "Kon arep nang endi, cak?"
+    register: ngoko
+    dialect: jawa-timuran
+    stance: peer
+
+  # ngoko × banyumasan
+  - id: s09
+    text: "Inyong arep mangan dhisit. Rika wis mangan durung?"
+    register: ngoko
+    dialect: banyumasan
+    stance: peer
+  - id: s10
+    text: "Rika kudu ngrampungna tugas kuwe sedina iki."
+    register: ngoko
+    dialect: banyumasan
+    stance: assertive
+  - id: s11
+    text: "Umah inyong adoh, ayo turu dhisit."
+    register: ngoko
+    dialect: banyumasan
+    stance: peer
+  - id: s12
+    text: "Kepriwe kabare, rika arep menyang ngendi?"
+    register: ngoko
+    dialect: banyumasan
+    stance: peer
+
+  # madya × mataraman
+  - id: s13
+    text: "Sampeyan sampun nedha dereng?"
+    register: madya
+    dialect: mataraman
+    stance: deferential
+  - id: s14
+    text: "Kula nyuwun tulung sampeyan maca naskah punika."
+    register: madya
+    dialect: mataraman
+    stance: deferential
+  - id: s15
+    text: "Sampeyan kudu ngirim laporan menika dina iki."
+    register: madya
+    dialect: mataraman
+    stance: assertive
+
+  # madya × jawa-timuran
+  - id: s16
+    text: "Sampeyan wes nedha durung, cak?"
+    register: madya
+    dialect: jawa-timuran
+    stance: deferential
+  - id: s17
+    text: "Kula nyuwun pangapunten, sampeyan kersa ngomong pelan-pelan."
+    register: madya
+    dialect: jawa-timuran
+    stance: deferential
+  - id: s18
+    text: "Sampeyan kudu teka rapat sore iki, cak."
+    register: madya
+    dialect: jawa-timuran
+    stance: assertive
+
+  # madya × banyumasan
+  - id: s19
+    text: "Sampeyan wis nedha durung neng umah?"
+    register: madya
+    dialect: banyumasan
+    stance: deferential
+  - id: s20
+    text: "Kula nyuwun tulung rika maca naskah kiyen."
+    register: madya
+    dialect: banyumasan
+    stance: deferential
+  - id: s21
+    text: "Sampeyan kudu ngrampungna laporan kiyen dina iki."
+    register: madya
+    dialect: banyumasan
+    stance: assertive
+
+  # krama × mataraman
+  - id: s22
+    text: "Panjenengan sampun dhahar dereng?"
+    register: krama
+    dialect: mataraman
+    stance: deferential
+  - id: s23
+    text: "Kula nyuwun pangapunten, panjenengan kersa sare rumiyin."
+    register: krama
+    dialect: mataraman
+    stance: deferential
+  - id: s24
+    text: "Panjenengan kula aturi kersa maringi pangandikan bab proposal menika."
+    register: krama
+    dialect: mataraman
+    stance: deferential
+  - id: s25
+    text: "Panjenengan kedah nglampahi rapat dinten punika."
+    register: krama
+    dialect: mataraman
+    stance: assertive
+
+  # krama × jawa-timuran
+  - id: s26
+    text: "Panjenengan sampun dhahar dereng neng Suroboyo, cak?"
+    register: krama
+    dialect: jawa-timuran
+    stance: deferential
+  - id: s27
+    text: "Kula nyuwun pangapunten, panjenengan kersa rawuh teng Suroboyo."
+    register: krama
+    dialect: jawa-timuran
+    stance: deferential
+
+  # krama × banyumasan
+  - id: s28
+    text: "Panjenengan sampun dhahar dereng neng umah?"
+    register: krama
+    dialect: banyumasan
+    stance: deferential
+  - id: s29
+    text: "Kula nyuwun tulung, panjenengan kersa maringi pangandikan kiyen."
+    register: krama
+    dialect: banyumasan
+    stance: deferential
+
+  # mixed register
+  - id: s30
+    text: "Panjenengan kowe ki piye, arep mangan apa dhahar?"
+    register: mixed
+    dialect: mataraman
+    stance: mixed

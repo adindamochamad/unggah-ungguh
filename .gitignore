@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+.env
+*.egg-info/
+.DS_Store
+.mypy_cache/
+*.log
+REVIEW_madya.md
+stage2-spike-cursor-pack.md

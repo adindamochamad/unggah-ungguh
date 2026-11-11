@@ -1,0 +1,171 @@
+# Krama / madya / ngoko pairs and dialect markers.
+# Schema version: 0.1.0
+# Inspectable by a Javanese speaker; extend here, not in model weights.
+
+version: "0.1.0"
+
+pairs:
+  - id: you
+    kind: address
+    ngoko: kowe
+    madya: sampeyan
+    krama: panjenengan
+  - id: you-timuran
+    kind: address
+    ngoko: kon
+  - id: you-banyumas
+    kind: address
+    ngoko: rika
+  - id: i
+    kind: address
+    ngoko: aku
+    krama: kula
+  - id: i-banyumas
+    kind: address
+    ngoko: inyong
+  - id: eat
+    kind: vocab
+    ngoko: mangan
+    madya: nedha
+    krama: dhahar
+  - id: sleep
+    kind: vocab
+    ngoko: turu
+    krama: sare
+  - id: go
+    kind: vocab
+    ngoko: lungo
+    krama: kesah
+  - id: come
+    kind: vocab
+    ngoko: teka
+    krama: rawuh
+  - id: speak
+    kind: vocab
+    ngoko: ngomong
+    krama: ngendika
+  - id: see
+    kind: vocab
+    ngoko: weruh
+    krama: pirsa
+  - id: want
+    kind: vocab
+    ngoko: arep
+    krama: badhe
+  - id: already
+    kind: vocab
+    ngoko: wis
+    krama: sampun
+  - id: already-timuran
+    kind: vocab
+    ngoko: wes
+  - id: not-yet
+    kind: vocab
+    ngoko: durung
+    krama: dereng
+  - id: not
+    kind: vocab
+    ngoko: ora
+    krama: mboten
+  - id: not-timuran
+    kind: vocab
+    ngoko: gak
+  - id: yes
+    kind: vocab
+    ngoko: ya
+    krama: inggih
+  - id: this
+    kind: vocab
+    ngoko: iki
+    krama: menika
+  - id: that
+    kind: vocab
+    ngoko: kuwi
+    krama: punika
+  - id: who
+    kind: vocab
+    ngoko: sapa
+    krama: sinten
+  - id: where
+    kind: vocab
+    ngoko: ngendi
+    krama: pundi
+  - id: house
+    kind: vocab
+    ngoko: omah
+    krama: griya
+  - id: house-banyumas
+    kind: vocab
+    ngoko: umah
+  - id: water
+    kind: vocab
+    ngoko: banyu
+    krama: toya
+  - id: good
+    kind: vocab
+    ngoko: apik
+    krama: sae
+  - id: big
+    kind: vocab
+    ngoko: gedhe
+    krama: ageng
+  - id: small
+    kind: vocab
+    ngoko: cilik
+    krama: alit
+  - id: must
+    kind: vocab
+    ngoko: kudu
+    krama: kedah
+  - id: please-ask
+    kind: vocab
+    krama: nyuwun
+  - id: pardon
+    kind: vocab
+    krama: pangapunten
+  - id: willing
+    kind: vocab
+    krama: kersa
+  - id: first
+    kind: vocab
+    ngoko: dhisik
+    krama: rumiyin
+  - id: first-banyumas
+    kind: vocab
+    ngoko: dhisit
+  - id: day
+    kind: vocab
+    ngoko: dina
+    krama: dinten
+  - id: that-banyumas
+    kind: vocab
+    ngoko: kiyen
+  - id: that-banyumas2
+    kind: vocab
+    ngoko: kuwe
+
+dialect_markers:
+  mataraman:
+    - kowe
+    - dhisik
+    - menyang
+    - ngendi
+    - aku
+  jawa-timuran:
+    - kon
+    - cak
+    - cah
+    - ae
+    - gak
+    - endi
+    - wes
+    - suroboyo
+  banyumasan:
+    - inyong
+    - rika
+    - kiyen
+    - dhisit
+    - kepriwe
+    - umah
+    - kuwe
+    - ngrampungna
